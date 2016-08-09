@@ -31,6 +31,10 @@ html {
 	position: relative;
 }
 
+header, footer {
+	height: 3em;
+}
+
 body {
 	background-color: #F90;
 	color: #FFF;
@@ -38,17 +42,10 @@ body {
 	flex-direction: column;
 	font-family: 'gilroylight';
 	font-size: 20px;
+	justify-content: space-between;
 	min-height: 100%;
 	margin: 0;
 	padding: 0.5em 0.7em;
-}
-
-header {
-	height: 3em;
-}
-
-footer {
-	height: 2em;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -69,7 +66,7 @@ p {
 }
 
 #time-container {
-	flex-grow: 1;
+	padding: 1em 0;
 	text-align: center;
 }
 #time-container h2 {
