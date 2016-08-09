@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE project>
+<project name="Dubious Timepiece" default="build">
+	
+	<target name="init">
+		<mkdir dir="dist" />
+	</target>
+	
+	<target name="build" description="Build the project to the dist directory." depends="init">
+		<echo message="Starting build..." level="info" />
+		
+		<!-- Build currently just does a simple copy operation -->
+		<echo message="Copying application files..." level="info" />
+		<copy todir="dist">
+			<fileset dir="src" />
+		</copy>
+		
+		<echo message="Build finished." level="info" />
+	</target>
+	
+	<target name="clean" description="Deletes the dist directory.">
+		<delete dir="dist" />
+	</target>
+	
+</project>
