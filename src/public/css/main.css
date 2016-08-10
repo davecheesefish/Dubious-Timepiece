@@ -66,14 +66,18 @@ p {
 }
 
 #time-container {
+	font-size: 1.5em;
 	padding: 1em 0;
 	text-align: center;
 }
 #time-container h2 {
 	font-size: 1em;
 }
-#time {
+#activity {
 	font-family: gilroyextrabold;
 	font-size: 3em;
+	line-height: 1;
+	margin-top: 0.1em;
+	padding: 0 0.7em;
 	text-transform: uppercase;
 }

@@ -2,6 +2,8 @@
 <!DOCTYPE project>
 <project name="Dubious Timepiece" default="build">
 	
+	<property file="build/credentials.build.properties" />
+	
 	<target name="init">
 		<mkdir dir="dist" />
 	</target>
@@ -12,7 +14,18 @@
 		<!-- Build currently just does a simple copy operation -->
 		<echo message="Copying application files..." level="info" />
 		<copy todir="dist">
-			<fileset dir="src" />
+			<fileset dir="src">
+				<exclude name="application/db.php" />
+			</fileset>
+		</copy>
+		
+		<copy todir="dist">
+			<fileset dir="src">
+				<include name="application/db.php" />
+			</fileset>
+			<filterchain>
+				<expandproperties />
+			</filterchain>
 		</copy>
 		
 		<echo message="Build finished." level="info" />
